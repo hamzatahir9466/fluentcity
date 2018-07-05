@@ -1,0 +1,44 @@
+ <html>
+    <head>
+      <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.1.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.1.0/jasmine.css">
+
+<script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/jasmine.js"></script>
+
+<script type="text/javascript" src="js/assignment.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/jasmine-html.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/boot.js"></script>
+
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    </head>
+    <!--So above are some links that i added for bootstrap and jasmine unit testing. I tried to do unit testing using hJasmine framework but it did not work for me. I would like to learn it if get hired-->
+    <body>
+<!-- This is code is for selecting a file  which take any file extension but that should be a text file so that code could  read a dictionary-->
+    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+  
+  <!-- This code is for input field whose anagram has to figure out. This field has a function on change which keep updating input value on every change event-->
+    <div class="form-group">
+     <label for="usr">input:</label>
+     <input type="text" class="form-control" id="usr" onchange ="saveval(this.value)">
+    </div>
+
+     <!--this is the button which user has to click after he is done with input. Once user clicks on this button it will show anagram results-->
+      <button type="button" id="searchbtn" class="btn btn-success" onclick='search()'>search</button>
+      <p>Result will be shown below</p>
+      <!--this is the output field which is gonna populated dynamically-->
+      <div id='output'>
+    
+    </div>
+    </body>
+
+
+    <!-- -->
+       </html>
