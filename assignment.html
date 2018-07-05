@@ -94,9 +94,10 @@ usrinput= document.getElementById("usr").value;
       var counter=0;
       var result=[];
       var bool= 1;
+      alert(list[0])
 
 // this loop will run till word at i th index in list is smaller or equal to length of user input. That is where sorting an array list gives benefit
-      for ( var i=0;  list[i].length<usrinput.length;i++ )
+      for ( var i=0;  i<list.length&& list[i].length<(usrinput.length+1);i++ )
       {
         // if the word in list and user input are equal
           if(list[i].length==usrinput.length)
