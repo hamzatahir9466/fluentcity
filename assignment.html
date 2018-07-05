@@ -96,7 +96,7 @@ usrinput= document.getElementById("usr").value;
       var bool= 1;
 
 // this loop will run till word at i th index in list is smaller or equal to length of user input. That is where sorting an array list gives benefit
-      for ( var i=0;  list[i].length<=usrinput.length;i++ )
+      for ( var i=0;  list[i].length<usrinput.length;i++ )
       {
         // if the word in list and user input are equal
           if(list[i].length==usrinput.length)
@@ -112,7 +112,7 @@ usrinput= document.getElementById("usr").value;
               for (var k=0;k<list[i].length&& bool!=0;k++)
               {
                 // this is comapring if characters are same and is not repeated by checking it through check.
-                if(list[i][k]==usrinput[j]&&check[j]!='y')
+                if(list[i][k]==usrinput[j]&&check[k]!='y')
                 {
 
 // here counter will be incremented each time it finds same character
@@ -120,7 +120,7 @@ usrinput= document.getElementById("usr").value;
                   // once same characters are there then it is gonna set 'y' at that index in check for that
                   // i have to split it on null '' and then set y at that index then join it back becuase strings are immutable in javascript
                   check=check.split('');
-                  check[j]='y';
+                  check[k]='y';
                   // here is the bool varibale being set to terminate the loop
                   bool= 0;
                   check=check.join("");
@@ -128,9 +128,9 @@ usrinput= document.getElementById("usr").value;
 
               }
               //resetting the bool variable for next loop
-
+            if(bool==0){
               bool = 1;
-
+              }
             }
 // before finalizng a word for result here counter is makeing sure that counter and length of that variable has same 
 // numeric value..
